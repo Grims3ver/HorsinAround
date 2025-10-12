@@ -709,7 +709,7 @@ Transform:
   m_GameObject: {fileID: 145437449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1.52, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4558,7 +4558,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 80, y: 1.87, z: 18.95}
+  m_LocalPosition: {x: 80, y: 1.87, z: 18.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11796,7 +11796,7 @@ Transform:
   m_GameObject: {fileID: 965908287}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 82, y: 0, z: 19.45}
+  m_LocalPosition: {x: 82, y: 0, z: 19.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11820,14 +11820,28 @@ MonoBehaviour:
   move: {fileID: -590079601614414936, guid: 462c6785cd1630b4e91b46e5ef22f511, type: 3}
   jump: {fileID: 550179950464118642, guid: 462c6785cd1630b4e91b46e5ef22f511, type: 3}
   sprint: {fileID: 8405585403239591080, guid: 462c6785cd1630b4e91b46e5ef22f511, type: 3}
-  walkSpeed: 5
-  sprintSpeed: 8
+  walkSpeed: 3.5
+  sprintSpeed: 7
   acceleration: 12
-  deceleration: 14
+  deceleration: 12
   rotationSharpness: 1
-  jumpHeight: 1.2
-  gravity: -10
+  jumpHeight: 1.5
+  gravity: -30
   groundedStickForce: -2
+  backpedalKeepsFacing: 1
+  backpedalMultiplier: 2
+  inputDeadzone: 0.08
+  lateralBackpedalDeadzone: 0.25
+  coyoteTime: 0.12
+  jumpBuffer: 0.12
+  maxAirControl: 0.6
+  terminalFallSpeed: -50
+  slopeSlideGravity: 20
+  groundProbeRadius: 0.25
+  groundProbeDistance: 0.6
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &965908290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11877,7 +11891,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.4
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.01
   m_SkinWidth: 0.08
@@ -20761,7 +20775,7 @@ Transform:
   m_GameObject: {fileID: 1727349295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 80, y: 1.87, z: 18.95}
+  m_LocalPosition: {x: 80, y: 1.87, z: 18.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
